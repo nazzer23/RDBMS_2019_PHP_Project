@@ -1,0 +1,142 @@
+<div class="row">
+    <!-- Left -->
+    <div class="col-md-3">
+        <!-- Start User Details -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">{bookName}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <strong>Book ISBN</strong>
+                <p class="text-muted">{bookISBN}</p>
+                <hr/>
+                <strong>Current Stock</strong>
+                <p class="text-muted">{bookStock}</p>
+                <hr/>
+                <strong>Number of Books Sold</strong>
+                <p class="text-muted">{bookSoldCount}</p>
+                <hr/>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- End User Details -->
+
+        <!-- End Left -->
+    </div>
+    <!-- Start Right -->
+    <div class="col-md-7">
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#settings" data-toggle="tab">Settings</a>
+                </li>
+                <li>
+                    <a href="#restock" data-toggle="tab">Restock</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                {notif}
+                <div class="active tab-pane" id="settings">
+                    <form class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <label
+                                    for="inputAuthor"
+                                    class="col-sm-2 control-label"
+                            >Book Author</label
+                            >
+
+                            <div class="col-sm-6">
+                                <select name="selectBookAuthor" id="inputAuthor">
+                                    {authors}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                    for="inputBookPrice"
+                                    class="col-sm-2 control-label"
+                            >Book Price</label
+                            >
+
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-gbp"></i></span>
+                                    <input
+                                            type="text"
+                                            class="form-control"
+                                            id="inputBookPrice"
+                                            name="bookPrice"
+                                            value="{bookPrice}"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                    for="inputBookBio"
+                                    class="col-sm-2 control-label"
+                            >Book Description</label
+                            >
+
+                            <div class="col-sm-6">
+                                <textarea class="form-control"
+                                          id="inputBookBio"
+                                          name="bookBio">{bookBio}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-6">
+                                <button name="settingsSubmitBtn" type="submit" class="btn btn-primary">
+                                    Submit Changes
+                                </button>
+                                <button name="unhideBtn" type="submit" class="btn btn-success">
+                                    Unhide Book
+                                </button>
+                                <button name="deleteBtn" type="submit" class="btn btn-danger">
+                                    Hide Book
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+
+                <div class="tab-pane" id="restock">
+                    <form class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <label
+                                    for="inputRestockAmount"
+                                    class="col-sm-2 control-label"
+                            >Restock Amount</label
+                            >
+
+                            <div class="col-sm-6">
+                                <input
+                                        type="text"
+                                        class="form-control"
+                                        id="inputRestockAmount"
+                                        name="restockAmt"
+                                        value="0"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-6">
+                                <button name="restockBtn" type="submit" class="btn btn-primary">
+                                    Restock
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+        </div>
+    </div>
+    <!-- End Right-->
+</div>

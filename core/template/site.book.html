@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="container-fluid">
+        <div class="my-3 p-3 bg-white rounded box-shadow">
+            <h3 class="text-center">{bookName}</h3>
+            <h5 class="text-center">by {authorName}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+                <div class="rounded mx-auto d-block">
+                    <img alt="{bookName} book cover" class="img-fluid rounded mx-auto d-block" src="{bookImage}">
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th scope="row">ISBN</th>
+                            <td>{isbn}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Price</th>
+                            <td>£{price}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stock Remaining</th>
+                            <td>{stock}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>{cartButton}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+                <h3>Book Synapsis</h3>
+                {bookData}
+            </div>
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+                <h3>More by this author</h3>
+                <div class="col d-flex justify-content-center">
+                    {authorBooks}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

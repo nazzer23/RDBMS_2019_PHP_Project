@@ -1,0 +1,113 @@
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Add a Book</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                {notif}
+                <form class="form-horizontal" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label
+                                for="inputBookName"
+                                class="col-sm-2 control-label"
+                        >Book Name</label
+                        >
+
+                        <div class="col-sm-6">
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputBookName"
+                                    name="bookName"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label
+                                for="inputAuthor"
+                                class="col-sm-2 control-label"
+                        >Book Author</label
+                        >
+
+                        <div class="col-sm-6">
+                            <select name="selectBookAuthor" id="inputAuthor">
+                                {authors}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label
+                                for="inputBookPrice"
+                                class="col-sm-2 control-label"
+                        >Book Price</label
+                        >
+
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-gbp"></i></span>
+                                <input
+                                        type="text"
+                                        class="form-control"
+                                        id="inputBookPrice"
+                                        name="bookPrice"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label
+                                for="inputBookBio"
+                                class="col-sm-2 control-label"
+                        >Book Description</label
+                        >
+
+                        <div class="col-sm-6">
+                                <textarea class="form-control"
+                                          id="inputBookBio"
+                                          name="bookBio"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label
+                                for="inputBookISBN"
+                                class="col-sm-2 control-label"
+                        >Book ISBN</label
+                        >
+
+                        <div class="col-sm-6">
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputBookISBN"
+                                    name="bookISBN"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookImage" class="col-sm-2 control-label">Book Image</label>
+                        <input type="file" name="bookImageFile" id="bookImage">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-6">
+                            <button name="addBtn" type="submit" class="btn btn-primary">
+                                Add Book
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- /.col -->
+</div>

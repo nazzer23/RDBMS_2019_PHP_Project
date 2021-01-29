@@ -1,0 +1,80 @@
+<div class="row">
+    <!-- Left -->
+    <div class="col-md-3">
+        <!-- User Main -->
+        <div class="box box-widget widget-user">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header bg-aqua-active">
+                <h3 class="widget-user-username">{profileName}</h3>
+            </div>
+            <div class="widget-user-image">
+                <img
+                        class="img-circle"
+                        src="dist/img/no-avatar.png"
+                        alt="User Avatar"
+                />
+            </div>
+            <div class="box-footer"></div>
+        </div>
+        <!-- End User Main -->
+
+        <!-- Start User Details -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">About {profileName}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <strong>Number of Books Purchased</strong>
+                <p class="text-muted">{bookCount}</p>
+                <hr/>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- End User Details -->
+
+        <!-- End Left -->
+    </div>
+    <!-- Start Right -->
+    <div class="col-md-7">
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#books" data-toggle="tab">Sales</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="active tab-pane" id="books">
+                    <!-- Book Data -->
+                    <table
+                            id="sales"
+                            class="table table-bordered table-striped"
+                    >
+                        <thead>
+                        <tr>
+                            <th>Sale ID</th>
+                            <th>Book Name</th>
+                            <th>Book Price</th>
+                            <th>Date Purchased</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {sales}
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Sale ID</th>
+                            <th>Book Name</th>
+                            <th>Book Price</th>
+                            <th>Date Purchased</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+        </div>
+    </div>
+    <!-- End Right-->
+</div>
